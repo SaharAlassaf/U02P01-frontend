@@ -1,93 +1,93 @@
-
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleLeft, faEnvelope, faUnlockAlt } from "@fortawesome/free-solid-svg-icons";
-import { faFacebookF, faGithub, faTwitter } from "@fortawesome/free-brands-svg-icons";
-import { Col, Row, Form, Card, Button, FormCheck, Container, InputGroup } from '@themesberg/react-bootstrap';
-import { Link } from 'react-router-dom';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import { Link } from "react-router-dom";
+import "../../App.css";
+import "../../bootstrap.css";
+import "../../bootstrap-icons/bootstrap-icons.css";
+import "../../assets/css/auth.css";
+import "../../assets/css/font.css";
 
-import BgImage from "./signin.svg";
-
-
- function Signin () {
+function Signin() {
   return (
-    <main>
-      <section className="d-flex align-items-center my-5 mt-lg-6 mb-lg-5">
-        <Container>
-          {/* <p className="text-center">
-            <Card.Link as={Link} to={Routes.DashboardOverview.path} className="text-gray-700">
-              <FontAwesomeIcon icon={faAngleLeft} className="me-2" /> Back to homepage
-            </Card.Link>
-          </p> */}
-          <Row className="justify-content-center form-bg-image" style={{ backgroundImage: `url(${BgImage})` }}>
-            <Col xs={12} className="d-flex align-items-center justify-content-center">
-              <div className="bg-white shadow-soft border rounded border-light p-4 p-lg-5 w-100 fmxw-500">
-                <div className="text-center text-md-center mb-4 mt-md-0">
-                  <h3 className="mb-0">Sign in to our platform</h3>
-                </div>
-                <Form className="mt-4">
-                  <Form.Group id="email" className="mb-4">
-                    <Form.Label>Your Email</Form.Label>
-                    <InputGroup>
-                      <InputGroup.Text>
-                        <FontAwesomeIcon icon={faEnvelope} />
-                      </InputGroup.Text>
-                      <Form.Control autoFocus required type="email" placeholder="example@company.com" />
-                    </InputGroup>
-                  </Form.Group>
-                  <Form.Group>
-                    <Form.Group id="password" className="mb-4">
-                      <Form.Label>Your Password</Form.Label>
-                      <InputGroup>
-                        <InputGroup.Text>
-                          <FontAwesomeIcon icon={faUnlockAlt} />
-                        </InputGroup.Text>
-                        <Form.Control required type="password" placeholder="Password" />
-                      </InputGroup>
-                    </Form.Group>
-                    <div className="d-flex justify-content-between align-items-center mb-4">
-                      <Form.Check type="checkbox">
-                        <FormCheck.Input id="defaultCheck5" className="me-2" />
-                        <FormCheck.Label htmlFor="defaultCheck5" className="mb-0">Remember me</FormCheck.Label>
-                      </Form.Check>
-                      <Card.Link className="small text-end">Lost password?</Card.Link>
-                    </div>
-                  </Form.Group>
-                  <Button variant="primary" type="submit" className="w-100">
-                    Sign in
-                  </Button>
-                </Form>
+    <div id="auth">
+      <div className="row align-items-center">
+        <div className="col-lg-2"></div>
+        <div className="col-lg-8">
+          <div id="auth-left">
+            {/* <div className="auth-logo">
+                    <a href="index.html"><img src="assets/images/logo/logo.png" alt="Logo"></a>
+                </div> */}
+            <h1 className="auth-title">Log in.</h1>
+            <p className="auth-subtitle mb-5">
+              Log in with your data that you entered during registration.
+            </p>
 
-                {/* <div className="mt-3 mb-4 text-center">
-                  <span className="fw-normal">or login with</span>
+            <form action="index.html">
+              <div className="form-group position-relative has-icon-left mb-4">
+                <input
+                  type="text"
+                  className="form-control form-control-xl"
+                  placeholder="Username"
+                />
+                <div className="form-control-icon">
+                  <i className="bi bi-person"></i>
                 </div>
-                <div className="d-flex justify-content-center my-4">
-                  <Button variant="outline-light" className="btn-icon-only btn-pill text-facebook me-2">
-                    <FontAwesomeIcon icon={faFacebookF} />
-                  </Button>
-                  <Button variant="outline-light" className="btn-icon-only btn-pill text-twitter me-2">
-                    <FontAwesomeIcon icon={faTwitter} />
-                  </Button>
-                  <Button variant="outline-light" className="btn-icon-only btn-pil text-dark">
-                    <FontAwesomeIcon icon={faGithub} />
-                  </Button>
-                </div> */}
-                {/* <div className="d-flex justify-content-center align-items-center mt-4">
-                  <span className="fw-normal">
-                    Not registered?
-                    <Card.Link as={Link} to={Routes.Signup.path} className="fw-bold">
-                      {` Create account `}
-                    </Card.Link>
-                  </span>
-                </div> */}
               </div>
-            </Col>
-          </Row>
-        </Container>
-      </section>
-    </main>
+              <div className="form-group position-relative has-icon-left mb-4">
+                <input
+                  type="password"
+                  className="form-control form-control-xl"
+                  placeholder="Password"
+                />
+                <div className="form-control-icon">
+                  <i className="bi bi-shield-lock"></i>
+                </div>
+              </div>
+              <div className="form-check form-check-lg d-flex align-items-end">
+                <input
+                  className="form-check-input me-2"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckDefault"
+                />
+                <label
+                  className="form-check-label text-gray-600"
+                  htmlFor="flexCheckDefault"
+                >
+                  Keep me logged in
+                </label>
+              </div>
+              <Link to="/Home">
+                <button className="btn btn-primary btn-block btn-lg shadow-lg mt-5">
+                  Log in
+                </button>
+              </Link>
+            </form>
+            <div className="text-center mt-5 text-lg fs-4">
+              <p className="text-gray-600">
+                Don't have an account?{" "}
+                <span className="font-bold">
+                  <Link to="/Signup">Sign up</Link>
+                </span>
+                .
+              </p>
+              <p>
+                <a className="font-bold" href="auth-forgot-password.html">
+                  Forgot password?
+                </a>
+                .
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="col-lg-2"></div>
+        {/* <div className="col-lg-7 d-none d-lg-block">
+            <div id="auth-right">
+
+            </div>
+        </div> */}
+      </div>
+    </div>
   );
-};
+}
 
 export default Signin;
