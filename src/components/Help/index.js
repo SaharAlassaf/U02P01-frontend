@@ -8,7 +8,7 @@ function Help() {
       <div id="main" className="layout-navbar">
         <div id="main-content">
           <div className="page-heading">
-            <h1>Help & Support</h1>
+            <h3>Help & Support</h3>
           </div>
           <div className="page-content">
             <div className="card">
