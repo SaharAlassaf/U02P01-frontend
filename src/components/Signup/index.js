@@ -7,7 +7,7 @@ import "../../bootstrap.css";
 
 function Signup() {
   return (
-    <div id="auth">
+    <div id="auth" className="bg-body">
       <div className="row align-items-center">
         <div className="col-lg-2"></div>
         <div className="col-lg-8">

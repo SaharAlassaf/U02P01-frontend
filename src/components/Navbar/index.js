@@ -16,11 +16,6 @@ function Navbar() {
               {/* <div className="logo">
                             <a href="index.html"><img src="assets/images/logo/logo.png" alt="Logo"/></a>
                         </div> */}
-              <div className="toggler">
-                <a href="#" className="sidebar-hide d-xl-none d-block">
-                  <i className="bi bi-x bi-middle"></i>
-                </a>
-              </div>
             </div>
           </div>
 
@@ -67,21 +62,29 @@ function Navbar() {
                 </Link>
               </li>
 
-              <li className={
+              <li
+                className={
                   splitLocation[1] === "Help"
                     ? "sidebar-item active"
                     : "sidebar-item"
-                }>
+                }
+              >
                 <Link to="/Help" className="sidebar-link">
                   <i className="bi bi-question-circle-fill"></i>
                   <span>Help</span>
-                  </Link>
+                </Link>
               </li>
-              <li className="sidebar-item">
-                <a href="#" className="sidebar-link">
+              <li
+                className={
+                  splitLocation[1] === "Landing"
+                    ? "sidebar-item active"
+                    : "sidebar-item"
+                }
+              >
+                <Link to="/Landing" className="sidebar-link">
                   <i className="bi bi-arrow-left"></i>
                   <span>Log out</span>
-                </a>
+                </Link>
               </li>
 
               {/* <li clclassNameass="sidebar-title">Forms &amp; Tables</li> */}
@@ -94,7 +97,7 @@ function Navbar() {
         </div>
       </div>
 
-      <div id="main" className="layout-navbar">
+      {/* <div id="main" className="layout-navbar">
         <header className="mb-3">
           <nav className="navbar navbar-expand navbar-light ">
             <div className="container-fluid">
@@ -160,11 +163,9 @@ function Navbar() {
                       <div className="user-name text-end me-3">
                         <h6 className="mb-0 text-gray-600">John Ducky</h6>
                       </div>
-                      {/* <div className="user-img d-flex align-items-center">
-                                            <div className="avatar avatar-md">
-                                                <img src="assets/images/faces/1.jpg">
-                                            </div>
-                                        </div> */}
+                      <div className="user-img d-flex align-items-center">
+                        <div className="avatar avatar-md"></div>
+                      </div>
                     </div>
                   </a>
                 </div>
@@ -172,8 +173,7 @@ function Navbar() {
             </div>
           </nav>
         </header>
-        <div id="main-content"></div>
-      </div>
+      </div> */}
     </div>
   );
 }

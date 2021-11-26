@@ -760,7 +760,6 @@
   transition: left 0.5s ease-out;
   width: 300px;
   z-index: 10;
-  box-shadow: 0px 1px 3px 0px #888;
 }
 .sidebar-wrapper .sidebar-header {
   font-size: 2rem;

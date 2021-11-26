@@ -8,7 +8,7 @@ import "../../assets/css/font.css";
 
 function Signin() {
   return (
-    <div id="auth">
+    <div id="auth" className="bg-body">
       <div className="row align-items-center">
         <div className="col-lg-2"></div>
         <div className="col-lg-8">
@@ -25,13 +25,16 @@ function Signin() {
               <div className="form-group position-relative has-icon-left mb-4">
                 <input
                   type="text"
-                  className="form-control form-control-xl"
+                  className="form-control form-control-xl is-invalid"
                   placeholder="Username"
                 />
+                 
                 <div className="form-control-icon">
                   <i className="bi bi-person"></i>
                 </div>
               </div>
+
+             
               <div className="form-group position-relative has-icon-left mb-4">
                 <input
                   type="password"
