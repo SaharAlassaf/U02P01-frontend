@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../../App.css";
-import "../../bootstrap.css";
-import "../../bootstrap-icons/bootstrap-icons.css";
+import "../../assets/css/bootstrap-icons/bootstrap-icons.css"
+import "../../assets/css/bootstrap.css"
 import "../../assets/css/auth.css";
 import "../../assets/css/font.css";
 

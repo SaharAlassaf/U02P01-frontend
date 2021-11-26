@@ -1,9 +1,9 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import "../../assets/css/auth.css";
-import "../../App.css";
-import "../../bootstrap-icons/bootstrap-icons.css";
-import "../../bootstrap.css";
+import React from "react"
+import { Link } from "react-router-dom"
+import "../../assets/css/auth.css"
+import "../../App.css"
+import "../../assets/css/bootstrap-icons/bootstrap-icons.css"
+import "../../assets/css/bootstrap.css"
 
 function Signup() {
   return (

@@ -1,3 +1,6 @@
+body {
+  background-color: #f2f7ff !important;
+}
 .alert {
   border: none;
 }
@@ -1496,4 +1499,10 @@ a {
 }
 .icon-mid:before {
   vertical-align: middle;
+}
+.footer-logout {
+  clear: both;
+  position: relative;
+  height: 200px;
+  margin-top: 370px;
 }

@@ -74,6 +74,7 @@ function Navbar() {
                   <span>Help</span>
                 </Link>
               </li>
+              <div className="footer-logout">
               <li
                 className={
                   splitLocation[1] === "Landing"
@@ -86,6 +87,7 @@ function Navbar() {
                   <span>Log out</span>
                 </Link>
               </li>
+              </div>
 
               {/* <li clclassNameass="sidebar-title">Forms &amp; Tables</li> */}
             </ul>

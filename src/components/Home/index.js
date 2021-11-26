@@ -1,13 +1,13 @@
 import React from "react";
 import Navbar from "../../components/Navbar";
-import "/Users/shr/Documents/U02P01-frontend/src/assets/css/iconly/bold.css";
-import PieChartWithCustomization from "./Pie Chart with Customization"
+import "../../assets/css/iconly/bold.css";
+import PieChartWithCustomization from "./Pie Chart with Customization";
 
 function Home() {
   return (
     <>
       <Navbar />
-      <div id="main" className="layout-navbar bg-body">
+      <div id="main" className="layout-navbar">
         <div id="main-content">
           <div className="page-heading">
             <h3>Home</h3>
@@ -79,48 +79,47 @@ function Home() {
             </div>
 
             <div className="row">
-              
               <div className="col-12 col-lg-6">
-              <div className="card">
-                <div className="card-header">
-                  <h4>Subscription</h4>
+                <div className="card">
+                  <div className="card-header">
+                    <h4>Subscriptions</h4>
+                  </div>
+                  <div className="table-responsive">
+                    <table className="table table-lg">
+                      <thead>
+                        <tr>
+                          <th>Subscription name</th>
+                          <th>Days left</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td className="text-bold-500">Michael Right</td>
+                          <td>$15/hr</td>
+                        </tr>
+                        <tr>
+                          <td className="text-bold-500">Morgan Vanblum</td>
+                          <td>$13/hr</td>
+                        </tr>
+                        <tr>
+                          <td className="text-bold-500">Tiffani Blogz</td>
+                          <td>$15/hr</td>
+                        </tr>
+                        <tr>
+                          <td className="text-bold-500">Ashley Boul</td>
+                          <td>$15/hr</td>
+                        </tr>
+                        <tr>
+                          <td className="text-bold-500">Mikkey Mice</td>
+                          <td>$15/hr</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div className="card-body">
+                    <div id="chart-visitors-profile"></div>
+                  </div>
                 </div>
-                <div className="table-responsive">
-                  <table className="table table-lg">
-                    <thead>
-                      <tr>
-                        <th>Subscription name</th>
-                        <th>Days left</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td className="text-bold-500">Michael Right</td>
-                        <td>$15/hr</td>
-                      </tr>
-                      <tr>
-                        <td className="text-bold-500">Morgan Vanblum</td>
-                        <td>$13/hr</td>
-                      </tr>
-                      <tr>
-                        <td className="text-bold-500">Tiffani Blogz</td>
-                        <td>$15/hr</td>
-                      </tr>
-                      <tr>
-                        <td className="text-bold-500">Ashley Boul</td>
-                        <td>$15/hr</td>
-                      </tr>
-                      <tr>
-                        <td className="text-bold-500">Mikkey Mice</td>
-                        <td>$15/hr</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-                <div className="card-body">
-                  <div id="chart-visitors-profile"></div>
-                </div>
-              </div>
               </div>
               <div className="col-12 col-lg-6">
                 <div className="card">
@@ -129,7 +128,7 @@ function Home() {
                   </div>
                   <div className="card-body">
                     <div id="chart-profile-visit">
-                    <PieChartWithCustomization />
+                      <PieChartWithCustomization />
                     </div>
                   </div>
                 </div>
