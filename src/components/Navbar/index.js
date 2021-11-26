@@ -71,7 +71,7 @@ function Navbar() {
               >
                 <Link to="/Help" className="sidebar-link">
                   <i className="bi bi-question-circle-fill"></i>
-                  <span>Help</span>
+                  <span>Help & Support</span>
                 </Link>
               </li>
               <div className="footer-logout">

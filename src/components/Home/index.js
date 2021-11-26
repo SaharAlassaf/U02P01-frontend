@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../../components/Navbar";
 import "../../assets/css/iconly/bold.css";
-import PieChartWithCustomization from "./Pie Chart with Customization";
+import PieChartWithCustomization from "../../assets/js/Pie Chart with Customization";
 
 function Home() {
   return (
