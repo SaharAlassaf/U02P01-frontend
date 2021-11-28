@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "../../assets/css/auth.css";
 import "../../App.css";
 import "../../assets/css/bootstrap-icons/bootstrap-icons.css";
 import "../../assets/css/bootstrap.css";
 import axios from "axios";
+
+const BASE_URL = process.env.REACT_APP_BASE_URL;
 
 function Signup() {
   const navigate = useNavigate();
@@ -14,32 +16,39 @@ function Signup() {
   const [password, setPassword] = useState("");
   const [user, setUser] = useState("");
   const [message, setMessage] = useState("");
-  const [error, setError] = useState(false);
   const [errorEmail, setErrorEmail] = useState(false);
   const [errorUser, setErrorUser] = useState(false);
+  
+  useEffect(() => {
+    const storage = localStorage.getItem("user");
+    setUser(JSON.parse(storage));
+
+}, // eslint-disable-next-line 
+[]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:5000/auth/signup", {
+      const res = await axios.post(`${BASE_URL}/auth/signup`, {
         name: name,
         email: email,
         username: username,
         password: password,
       });
       if (res.data.message === "User was registered successfully!") {
-        console.log("User was registered successfully!");
-        navigate("/Home");
+        // console.log("User was registered successfully!");
+        localStorage.setItem("user", JSON.stringify({ _id: res.data._id }));
+        navigate("/Signin");
       } else if (res.data.message === "Failed! Username is already in use!") {
         setErrorEmail(true);
       } else {
         setErrorUser(true);
         setMessage(res.data.message);
-        console.log(res.data.message);
+        // console.log(res.data.message);
       }
     } catch (error) {
-      console.log("get user data error", error);
-      console.log(error.response);
+      // console.log("get user data error", error);
+      // console.log(error.response);
       setErrorEmail(true);
       setErrorUser(true);
     }

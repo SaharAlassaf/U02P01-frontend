@@ -20,11 +20,11 @@ class PieChartWithCustomization extends Component {
 				indexLabel: "{y}%",
 				indexLabelPlacement: "inside",
 				dataPoints: [
-					{ y: 32, label: "Health" },
-					{ y: 22, label: "Finance" },
-					{ y: 15, label: "Education" },
-					{ y: 19, label: "Career" },
-					{ y: 5, label: "Family" },
+					{ y: 32, label: "MongoDB" },
+					{ y: 22, label: "Netflix" },
+					{ y: 15, label: "Adobe" },
+					{ y: 19, label: "Office" },
+					{ y: 5, label: "iCloud" },
 				]
 			}]
 		}

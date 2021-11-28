@@ -7000,8 +7000,8 @@ fieldset:disabled .btn {
     margin-top: 1.5rem !important;
   }
   .my-sm-5 {
-    margin-bottom: 3rem !important;
-    margin-top: 3rem !important;
+    margin-bottom: rem !important;
+    margin-top: 20rem !important;
   }
   .my-sm-auto {
     margin-bottom: auto !important;

@@ -1,0 +1,38 @@
+button.butLand{
+  display: inline-block;
+  padding: 0.3em 1.2em;
+  margin: 4em 0.3em 0.3em 0;
+  border-radius: 2em;
+  box-sizing: border-box;
+  font-weight: 300;
+  color: white;
+  background-color: #4eb5f1;
+  text-align: center;
+  transition: all 0.2s;
+  border: none;
+}
+button.butLand:hover{
+  background-color: #4095c6;
+}
+
+.landing-page{
+  height: 100vh;
+  overflow-x: hidden;
+  background-color: rgb(5, 15, 76);
+}
+
+.textLan{
+  color: white;
+  font-size: 1.5rem;
+}
+
+.imgLan{
+  margin-top: -100px;
+  margin-left: -150px;
+  width: 800px;
+}
+
+.logo{
+  color: white;
+  font-size: 3rem;
+}
